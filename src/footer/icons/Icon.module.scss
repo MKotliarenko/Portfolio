@@ -1,0 +1,22 @@
+@import "../../common/styles/sass/mixins";
+@import "../../common/styles/sass/variables";
+
+.iconBlock {
+  @include flexWithSize(45px, 45px, center, center);
+  display: inline-block;
+  background-color: transparent;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  margin-left: 5px;
+
+  a {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    color: $textColor;
+    text-decoration: none;
+  }
+}

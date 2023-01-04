@@ -1,28 +1,31 @@
 import React from 'react';
-import style from './Skills.module.css';
-import styleContainer from '../common/styles/Container.module.css';
+import style from './Skills.module.scss';
+import styleContainer from '../common/styles/Container.module.scss';
 import {Skill} from "./skill/Skill";
 import {Title} from "../common/components/title/title";
+import {Fade} from "react-awesome-reveal";
+import {faBriefcase, faLaptopCode, faTasks} from "@fortawesome/free-solid-svg-icons";
+import {faSketch} from "@fortawesome/free-brands-svg-icons";
 
 
 export const Skills = () => {
     return (
-        <div className={style.skillsBlock}>
-            <div className= {`${styleContainer.container} ${style.skillsContainer}`}>
-                <Title title={"Skills"} />
-                <div className={style.skills}>
-                    <Skill title={'TS'} description={"TypeScript is a strongly typed programming" +
-                        " language that builds on JavaScript, giving you better tooling at any scale."}/>
-                    <Skill title={'CSS'} description={"CSS is the language for describing the presentation " +
-                        "of Web pages, including colors, layout, and fonts."}/>
-                    <Skill title={'React'} description={"React is a declarative, efficient," +
-                        " and flexible JavaScript library for building user interfaces." +
-                        " It lets you compose complex UIs from small and isolated pieces " +
-                        "of code called “components”."}/>
-
+        <div id={'skills'} className={style.skillsBlock}>
+            <Fade bottom>
+                <div className={`${styleContainer.container} ${style.skillsContainer}`}>
+                    <Title title={"Skills"}/>
+                    <div className={style.skills}>
+                        <Skill title={'DEVELOPMENT'} description={"React, Redux, AXIOS etc."}
+                               titleIcon={faLaptopCode}/>
+                        <Skill title={'FOUNDATION'} description={"JavaScript, TypeScript, HTML5, CSS3."}
+                               titleIcon={faBriefcase}/>
+                        <Skill title={'TESTING'} description={"Unit Tests, SnapShot, Storybook."}
+                               titleIcon={faTasks}/>
+                        <Skill title={'DESIGN'} description={"Material UI, Ant-Design etc."}
+                               titleIcon={faSketch}/>
+                    </div>
                 </div>
-            </div>
-
+            </Fade>
         </div>
     );
 };

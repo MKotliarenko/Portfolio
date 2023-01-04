@@ -1,0 +1,21 @@
+@mixin flexWithSize($width, $height, $justifyContent, $alignItems) {
+  width: $width;
+  height: $height;
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+@mixin withFlex($justifyContent,$alignItems) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+
+@mixin text ($fontWeight, $fontSize, $lineHeight, $color, $letterSpacing){
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  color: $color;
+  letter-spacing: $letterSpacing
+}

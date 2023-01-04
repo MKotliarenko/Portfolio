@@ -1,0 +1,9 @@
+@import "../../common/styles/sass/mixins";
+
+.data {
+  @include withFlex(space-around, center);
+  flex-direction: column;
+  text-align: center;
+  min-width: 240px;
+  margin-bottom: 30px;
+}

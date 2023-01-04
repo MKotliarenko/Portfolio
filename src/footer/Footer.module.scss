@@ -1,0 +1,30 @@
+@import "../common/styles/sass/variables";
+@import "../common/styles/sass/mixins";
+
+.footerBlock {
+  @include flexWithSize(80%, 100%, space-between, center);
+  background: #212228;
+  padding: 10px 0;
+  margin: 0 auto;
+  flex-wrap: wrap;
+
+  .title {
+    @include text(700, 20px, 1.5em, $textColor, normal);
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+  }
+
+  .rightsFooter {
+    @include text(400, 16px, 1.75em, #868a9b, normal);
+    margin: 0;
+  }
+
+  .iconsContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+
+

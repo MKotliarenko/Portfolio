@@ -1,0 +1,41 @@
+@import '../../../common/styles/sass/variables';
+@import '../../../common/styles/sass/mixins';
+
+.dataBlock {
+  width: 240px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+
+  h4 {
+    @include text(600, 18px, 20px, $textColor, normal);
+    margin: 0;
+    text-transform: capitalize;
+  }
+
+  a, span {
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    @include text(400, 14px, 14px, $textColor, normal);
+  }
+
+  .icon {
+    height: 47px;
+    width: 47px;
+    color: $textColor;
+    border: 1px solid $primaryColor;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 47px;
+    margin-right: 12px;
+    text-align: center;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+  }
+}
